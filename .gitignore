@@ -1,0 +1,143 @@
+# Root .gitignore for authservice-microshop-pro
+
+# -------------------------
+# OS / Editor junk
+# -------------------------
+.DS_Store
+Thumbs.db
+Icon?
+ehthumbs.db
+*.swp
+*.swo
+*.orig
+*.rej
+*.bak
+*.tmp
+*.temp
+*.log
+logs/
+*.iml
+.idea/
+.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# -------------------------
+# Node / Frontend (Vite + React)
+# -------------------------
+**/node_modules/
+**/dist/
+**/build/
+**/.vite/
+**/.eslintcache
+**/.parcel-cache
+**/.cache/
+*.tsbuildinfo
+# Keep lockfiles committed
+# (package-lock.json / yarn.lock / pnpm-lock.yaml should NOT be ignored)
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.envrc
+.python-version
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+.eggs/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# -------------------------
+# Secrets / Keys / Certificates
+# -------------------------
+**/*.pem
+**/*.key
+**/*.crt
+**/*.cer
+**/*.der
+**/*.pfx
+**/*.p12
+**/*.jks
+# Explicitly ignore keys folder in auth-service
+apps/auth-service/app/keys/
+# If you keep a placeholder, whitelist it like:
+#!apps/auth-service/app/keys/README.md
+
+# -------------------------
+# Environment files
+# -------------------------
+# Ignore all real env files anywhere
+**/.env
+**/.env.*
+# Allow example/sample/template envs to be tracked
+!**/.env.example
+!**/.env.*.example
+!**/.env.sample
+!**/.env.template
+# Your deploy folder has a real .env; keep it ignored
+deploy/.env
+
+# -------------------------
+# Docker / Compose / Nginx
+# -------------------------
+docker-compose.override.yml
+.docker/
+**/tmp/
+**/temp/
+**/nginx/**/client_body_temp/
+**/nginx/**/proxy_temp/
+**/nginx/**/fastcgi_temp/
+**/nginx/**/uwsgi_temp/
+**/nginx/**/scgi_temp/
+**/nginx/**/access.log
+**/nginx/**/error.log
+
+# -------------------------
+# Databases / Runtime data
+# -------------------------
+*.db
+*.sqlite
+*.sqlite3
+**/pgdata/
+**/mysql/
+**/redis-data/
+**/data/
+
+# -------------------------
+# Misc build tooling
+# -------------------------
+.npm/
+.pnpm-store/
+.browserslistrc.cjs.timestamp
+.eslintcache
+.stylelintcache
+
+# -------------------------
+# OS-specific metadata (again, belt-and-suspenders)
+# -------------------------
+._*
+.Spotlight-V100
+.Trashes
+
+# -------------------------
+# Project-specific notes
+# -------------------------
+# Keep sample configs and templates tracked:
+!**/*example*
+!**/*sample*
+!**/*template*

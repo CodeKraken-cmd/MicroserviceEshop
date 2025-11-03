@@ -1,6 +1,6 @@
 # AUTHservice Microshop (Production-Ready Scaffold)
 
-This is a runnable microservices scaffold that combines ideas from Amazon/eBay/Alibaba:
+This is a runnable microservices scaffold that combines ideas from clients:
 - Catalog + Listings (offers & buy box)
 - Cart, Orders, Payments (with escrow), Auctions, Reviews, RFQ
 - Auth with HS256 (shared secret) by default; JWKS/RS256 optional
